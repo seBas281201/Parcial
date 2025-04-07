@@ -1,0 +1,248 @@
+/*
+ --- Fuentes ---
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+*/
+
+@font-face {
+    font-family: logo;
+    src: url(MAROLA__.TTF);
+}
+
+/* --- Configuraciones generales --- */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to bottom, #1a1a1d, #1f1c25, #261d2c, #301d30, #3b1c32) fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+
+/* --- Navbar --- */
+
+.navbar {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 5px;
+    font-style: normal;
+    margin-top: 5px;
+}
+
+.navbar .logo {
+    font-family: logo;
+    color: #E2DFD0;
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; 
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none; 
+    color: #E2DFD0; 
+    font-size: 15px;
+    position: relative; 
+    padding-bottom: 5px; 
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #E2DFD0;
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); 
+}
+
+.btnnav {
+    padding: 5px 10px;
+    text-transform: none;
+    text-decoration: none; 
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 5px;
+    font-style: normal;
+    font-size: 15px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    gap: 25px;
+}
+
+#btn-login:hover, #btn-contacto:hover,
+#btn-login:focus, #btn-contacto:focus, #links:focus, #lg:focus {
+    color: #ffffff;
+    background: #6A1E55;
+    border: 1px solid #6A1E55;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #6A1E55, 0 0 20px #6A1E55, 0 0 50px #6A1E55,
+      0 0 100px #6A1E55;
+}
+
+
+  svg{
+    margin-right: 5px;
+    margin-top: 2px;
+  }
+
+/* --- Body --- */
+
+.patro {
+    text-align: center;
+    margin: 40px 0;
+    margin-top: 100px;
+}
+
+.patro h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-bottom: 100px;
+    font-weight: 800;
+    font-size: 25px;
+    color: #E2DFD0;
+    text-align: center; 
+    max-width: 500px; /* Ajusta según necesidad */
+    line-height: 1.4; /* Mejora el espaciado entre líneas */
+    margin-left: auto;
+    margin-right: auto; /* Centra el texto */
+}
+
+
+.grafico-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    column-gap: 30px; 
+    row-gap: 100px; 
+    justify-items: center; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(59, 28, 50, 0.35);
+    box-shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 280px; 
+    height: 300px;
+    padding: 15px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.card:nth-child(odd) {
+    margin-top: 50px;
+}
+
+.card:hover {
+    background: rgba(59, 28, 50, 0.55);
+    transform: scale(1.08);
+    box-shadow: 0 12px 45px rgba(31, 38, 135, 0.5);
+}
+
+.card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 30px;
+    filter: invert(1) brightness(1000%);
+}
+
+.card canvas {
+    max-width: 90%;
+    max-height: 160px;
+    flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+    .grafico-container {
+        grid-template-columns: 1fr;
+    }
+    .card:nth-child(odd) {
+        margin-top: 0; 
+    }
+}
+
+
+/* --- Footer --- */
+
+.footer {
+    color: #E2DFD0;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 0.9rem;
+    margin-top: 240px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .logo {
+    font-family: logo;
+    color: #E2DFD0;
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px; 
+}
+
+.footer p {
+    margin: 0;
+}
